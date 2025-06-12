@@ -39,4 +39,9 @@ export class RegistroComponent {
     alert('¡Usuario registrado con éxito!');
     this.router.navigate(['/login']);
   }
+
+  volverAlLogin(event: Event) {
+    event.preventDefault();
+    this.router.navigate(['/login']);
+  }
 }
