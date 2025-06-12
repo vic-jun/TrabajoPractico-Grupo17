@@ -1,11 +1,40 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+interface Producto {
+  nombre: string;
+  imagen: string;
+  categoria: string;
+  precio: number;
+}
 
 @Component({
   selector: 'app-productos',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './productos.html',
   styleUrl: './productos.css'
 })
 export class ProductosComponent {
-
+  productos: Producto[] = [
+    {
+      nombre: 'Remera básica',
+      imagen: 'assets/remera.jpg',
+      categoria: 'Remeras',
+      precio: 3500
+    },
+    {
+      nombre: 'Jean clásico',
+      imagen: 'assets/jean.jpg',
+      categoria: 'Pantalones',
+      precio: 8500
+    },
+    {
+      nombre: 'Buzo argentina',
+      imagen: 'assets/buzo.jpg',
+      categoria: 'Buzos',
+      precio: 6500
+    }
+    // Agrega más productos aquí
+  ];
 }
