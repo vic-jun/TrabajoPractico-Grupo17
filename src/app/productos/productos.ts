@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CarritoService } from '../services/carrito.service';
+import { RouterModule } from '@angular/router';
 
 interface Producto {
   nombre: string;
@@ -12,7 +13,7 @@ interface Producto {
 @Component({
   selector: 'app-productos',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './productos.html',
   styleUrl: './productos.css'
 })
