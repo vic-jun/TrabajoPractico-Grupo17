@@ -29,6 +29,9 @@
           <h5 class="card-title">{{ producto.nombre }}</h5>
           <p class="card-text mb-1"><strong>Categoría:</strong> {{ producto.categoria }}</p>
           <p class="card-text"><strong>Precio:</strong> ${{ producto.precio }}</p>
+          <div class="d-flex justify-content-center">
+            <button class="btn btn-success w-60 mt-2" (click)="agregarAlCarrito(producto)">Agregar al carrito</button>
+          </div>
         </div>
       </div>
     </div>
